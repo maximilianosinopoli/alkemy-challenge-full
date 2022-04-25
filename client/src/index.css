@@ -5,22 +5,42 @@ body {
     sans-serif;
 }
 
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .content {
   margin: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  height: 84vh;
   width: 90%;
 }
 
 .header {
   background-color: rgb(204, 204, 204);
   min-height: 8vh;
-  width: 100%;
+  background-color: #256eff;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.footer {
+  min-height: 8vh;
+  width: 90%;
+  background-color: #3ddc97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0px 0px;
 }
 
 a {
@@ -29,9 +49,19 @@ a {
   color: inherit;
 }
 
-a:hover {
+.nav-link {
+  text-decoration: none;
+  font-size: large;
+  color: inherit;
+  border: 1px solid black;
+  border-radius: 12%;
+  padding: 10px;
+  background-color: #3ddc97;
+}
+
+.nav-link:hover {
   font-weight: bold;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .header-container {
@@ -46,12 +76,31 @@ a:hover {
   align-items: center;
   justify-content: left;
   width: 50%;
-  margin-left: 20px;
+  margin-left: 40px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 12%;
+  background-color: #ff495c;
+  padding: 10px;
 }
 
 .red {
   background-color: red;
 }
+
 .green {
   background-color: rgb(173, 218, 173);
+}
+
+.developer {
+  text-decoration: underline;
+}
+
+.developer:hover {
+  font-weight: bold;
+  transform: scale(1.1);
 }
