@@ -5,14 +5,12 @@ import Footer from './components/footer';
 
 
 function App() {
-
-  let balance = 4500
    
   return (
     <div className='container'>
        <Header />
-       <Balance balance={balance}/>
-      <Footer />
+       <Balance />
+       <Footer />
     </div>
   )
 }

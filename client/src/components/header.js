@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className='header'>
             <div className='brand'>
-              <a className='brand-name'href="/">BudTrack</a>
+              <a className='brand-name' href="/">BudTrack</a>
             </div>
             <div className='header-container'>
                 <a className='nav-link' href="/">Home</a>
