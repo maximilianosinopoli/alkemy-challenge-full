@@ -165,14 +165,19 @@ input {
   width: 550px;
 }
 
-button {
+.select {
+  height: 25px;
+  width: 550px;
+}
+
+/* button {
   height: 40px;
   width: 120px;
   background-color: #3ddc97;
   cursor: pointer;
   font-size: 18px;
   margin-top: 50px;
-}
+} */
 
 label {
   font-weight: bold;
@@ -185,4 +190,9 @@ label {
   color: red;
   margin-bottom: 45px;
   text-decoration: underline;
+}
+
+select {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

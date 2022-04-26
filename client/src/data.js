@@ -15,7 +15,7 @@ const data = [
     },
     {   id: 3,
         item: 'Movie',
-        price: -12000,
+        price: -12,
         date: '21-03-2022',
         type: 'Expenses',
         category: 'Leisure'
