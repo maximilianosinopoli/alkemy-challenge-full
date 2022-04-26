@@ -13,6 +13,14 @@ last10.map((item) => {
 
 let balanceStyle = (balance > 0 ? 'green' : 'red')
 
+function deleteTransaction(item) {
+    console.log('Delete transaction:', item.id)
+}
+
+function editTransaction(item) {
+    console.log('Edit transaction:', item.id)
+}
+
     return (
         <div className='content'>
             <h1><span className={balanceStyle}>	
@@ -36,8 +44,16 @@ let balanceStyle = (balance > 0 ? 'green' : 'red')
                     <th>Action</th>
                 </tr>
                     {last10.map((item, index) => {
-                        return <Transaction item={item.item} price={item.price} type={item.type} date={item.date} category={item.category} key={index} style={(item.type === 'Income' ? 'entry' : 'egress')}
-                        
+                        return <Transaction 
+                            deleteTransaction={() => deleteTransaction(item)} 
+                            editTransaction={() => editTransaction(item)} 
+                            item={item.item} 
+                            price={item.price} 
+                            type={item.type} 
+                            date={item.date} 
+                            category={item.category} 
+                            key={item.id} 
+                            style={(item.type === 'Income' ? 'entry' : 'egress')}
                         />
                     })}
                 </tbody>

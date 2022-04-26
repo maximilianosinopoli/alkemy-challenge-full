@@ -148,3 +148,41 @@ tr {
   border-radius: 30px;
   border: 10px red solid;
 }
+
+.form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70vh;
+  width: 90%;
+}
+
+input {
+  height: 25px;
+  width: 550px;
+}
+
+button {
+  height: 40px;
+  width: 120px;
+  background-color: #3ddc97;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.form-heading {
+  color: red;
+  margin-bottom: 45px;
+  text-decoration: underline;
+}

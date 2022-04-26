@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Transaction({item, price, category, type, date, style}) {
+function Transaction({item, price, category, type, date, style, deleteTransaction, editTransaction}) {
 
     return (
                 <tr className={style}>
@@ -9,7 +9,10 @@ function Transaction({item, price, category, type, date, style}) {
                     <td>{type}</td>
                     <td>{date}</td>
                     <td>{category}</td>
-                    <td><button type="">X</button><button type="">Edit</button></td>
+                    <td>
+                        <button type="" onClick={deleteTransaction}>X</button>
+                        <button type="" onClick={editTransaction}>Edit</button>
+                    </td>
 
                 </tr> 
     )
