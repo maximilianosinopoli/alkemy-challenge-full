@@ -36,7 +36,7 @@ let balanceStyle = (balance > 0 ? 'green' : 'red')
                     <th>Action</th>
                 </tr>
                     {last10.map((item, index) => {
-                        return <Transaction item={item.item} price={item.price} type={item.price} date={item.date} category={item.category} key={index} style={(item.type === 'Entry' ? 'entry' : 'egress')}
+                        return <Transaction item={item.item} price={item.price} type={item.type} date={item.date} category={item.category} key={index} style={(item.type === 'Income' ? 'entry' : 'egress')}
                         
                         />
                     })}
