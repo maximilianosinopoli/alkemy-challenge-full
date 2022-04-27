@@ -18,7 +18,7 @@ function App() {
 
           <Routes>
 
-            <Route path="/balance" element={<Balance/>}></Route>
+            <Route path="/" element={<Balance/>}></Route>
             <Route path="/add" element={<Form/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/search" element={<Search/>}></Route>
