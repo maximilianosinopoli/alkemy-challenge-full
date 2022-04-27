@@ -11,20 +11,20 @@ function Form() {
            <input type="text" /> <br></br>
            <label for="">Type:</label>
            <select name="" id="" className='select'>
-                <option value="volvo">Income</option>
-                <option value="saab">Expenses</option>
+             <option value="">Income</option>
+             <option value="">Expenses</option>
             </select>
            <label for="">Date:</label>
            <input type="date"/> <br></br>
            <label for="">Category:</label>
            <select name="" id="" className='select'>
-                <option value="volvo">Food</option>
-                <option value="saab">Leisure</option>
-                <option value="mercedes">Bills</option>
-                <option value="audi">Salary</option>
-                <option value="audi">Other</option>
+                <option value="">Food</option>
+                <option value="">Leisure</option>
+                <option value="">Bills</option>
+                <option value="">Salary</option>
+                <option value="">Other</option>
             </select>
-           <button>SUBMIT</button>
+           <button className='submit'>SUBMIT</button>
        </form>
 
     </div>

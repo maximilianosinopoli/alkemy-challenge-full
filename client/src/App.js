@@ -1,20 +1,34 @@
 import './index.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import Header from './components/header';
 import Balance from './components/balance';
 import Footer from './components/footer';
 import Form from './components/form';
+import About from './components/about';
+import Search from './components/search';
 
 
 function App() {
    
   return (
-    <div className='container'>
-       <Header />
-       <Balance />
-        <Form />
-       <Footer />
+    <Router>
+      <div className='container'>
+          <Header />
 
-    </div>
+          <Routes>
+
+            <Route path="/balance" element={<Balance/>}></Route>
+            <Route path="/add" element={<Form/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/search" element={<Search/>}></Route>
+
+          </Routes>
+  
+          <Footer />
+        </div>
+    </Router>
+
   )
 }
 

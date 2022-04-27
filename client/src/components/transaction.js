@@ -10,8 +10,8 @@ function Transaction({item, price, category, type, date, style, deleteTransactio
                     <td>{date}</td>
                     <td>{category}</td>
                     <td>
-                        <button type="" onClick={deleteTransaction}>X</button>
-                        <button type="" onClick={editTransaction}>Edit</button>
+                        <button type="" onClick={deleteTransaction} className='button'>X</button>
+                        <button type="" onClick={editTransaction} className='button'>Edit</button>
                     </td>
 
                 </tr> 

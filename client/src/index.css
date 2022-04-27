@@ -94,12 +94,12 @@ a {
   padding: 10px;
 }
 
-.egress {
-  background-color: #ff495c;
+.expenses {
+  background-color: #ff0019;
 }
 
-.entry {
-  background-color: rgb(50, 251, 50);
+.income {
+  background-color: rgb(0, 255, 0);
 }
 
 .developer {
@@ -170,14 +170,23 @@ input {
   width: 550px;
 }
 
-/* button {
+.submit {
   height: 40px;
   width: 120px;
   background-color: #3ddc97;
   cursor: pointer;
   font-size: 18px;
   margin-top: 50px;
-} */
+}
+
+.button {
+  height: 30px;
+  width: 50px;
+  background-color: #fcfcfc;
+  cursor: pointer;
+  margin: 5px;
+  border: 3px black solid;
+}
 
 label {
   font-weight: bold;
@@ -195,4 +204,8 @@ label {
 select {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.about {
+  margin-top: 100px;
 }

@@ -53,7 +53,7 @@ function editTransaction(item) {
                             date={item.date} 
                             category={item.category} 
                             key={item.id} 
-                            style={(item.type === 'Income' ? 'entry' : 'egress')}
+                            style={(item.type === 'Income' ? 'income' : 'expenses')}
                         />
                     })}
                 </tbody>
