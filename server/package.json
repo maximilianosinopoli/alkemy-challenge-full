@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www.js",
-    "dev": "nodemon .bin.www.js"
+    "dev": "nodemon .bin.www.js",
+    "dbcreatetable": "node -r dotenv/config ./db/scripts/createTable.js",
+    "dbpopulatetable": "node -r dotenv/config ./db/scripts/populateTable.js",
+    "dbquerytable": "node -r dotenv/config ./db/scripts/queryTable.js",
+    "dbdeletetable": "node -r dotenv/config ./db/scripts/deleteTable.js",
+    "dotenv": "node -r dotenv/config test.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
