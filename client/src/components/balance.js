@@ -1,14 +1,24 @@
 import React from 'react'
-import data from '../data'
 import Transaction from './transaction'
+import { useEffect, useState } from 'react'
 
 function Balance() {
 
-const last10 = data.slice(0, 10)
 let balance = 0
 
-last10.map((item) => {
-   return balance = balance + item.price
+  useEffect(() => {
+    async function fetchData() {
+        const response = await fetch('http://localhost:3000/transactions')
+        const resJson = await response.json()
+        setData(resJson.payload)
+    }
+    fetchData()
+  }, []);
+
+  let [data, setData] = useState([]);
+
+data.map((item) => {
+   return balance = balance + item.amount
 })
 
 let balanceStyle = (balance > 0 ? 'green' : 'red')
@@ -43,12 +53,12 @@ function editTransaction(item) {
                     <th>Category</th>
                     <th>Action</th>
                 </tr>
-                    {last10.map((item, index) => {
+                    {data.map((item, index) => {
                         return <Transaction 
                             deleteTransaction={() => deleteTransaction(item)} 
                             editTransaction={() => editTransaction(item)} 
-                            item={item.item} 
-                            price={item.price} 
+                            item={item.concept} 
+                            price={item.amount} 
                             type={item.type} 
                             date={item.date} 
                             category={item.category} 

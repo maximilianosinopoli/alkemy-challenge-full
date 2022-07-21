@@ -1,9 +1,9 @@
-import query from "../index.js";
+import db from "../index.js";
 
 const sqlString = `SELECT * FROM transactions`;
 
-async function queryTable() {
-    const res = await query(sqlString);
+export async function queryTable() {
+    const res = await db.query(sqlString);
     console.log(res);
 }
 

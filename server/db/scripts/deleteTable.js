@@ -1,9 +1,9 @@
-import query from "../index.js";
+import db from "../index.js";
 
 const sqlString = `DROP TABLE IF EXISTS transactions;`;
 
-async function deleteTable() {
-    const res = await query(sqlString);
+export async function deleteTable() {
+    const res = await db.query(sqlString);
     console.log('Table delete succesfully!', res);
 }
 

@@ -1,19 +1,17 @@
-import pg from 'pg';
-import * as config from "../config.js";
+import pg from "pg";
+import * as config from "../config.js"
 
 const pool = new pg.Pool({
-    host: config.databaseHost,
-    database: config.databaseName,
-    user: config.username,
-    port: config.dbPort,
-    password: config.password,
-    connectionString: process.env.DATABASE_URL || 'postgres://ldvonfnksakmwu:fb1eb7f0970fee9a8b4c40c41b9d4af87070b1e2056fd2e904aacdda270e53ae@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d4878n5ij03ic4',
-    ssl: process.env.DATABASE_URL ? true : false,
-    ssl: {
-        rejectUnauthorized: false,
-    }
+  host: config.DATABASE_HOST,
+  database: config.DATABASE_NAME,
+  user: config.USERNAME,
+  port: config.DB_PORT,
+  password: config.PASSWORD,
+  connectionString: process.env.URI || 'postgres://vnkvvkkmsgvtwk:e180692975ed6ef69b95f9fe9bed418c3750fd2059904e30abbeed8479314ea6@ec2-52-49-120-150.eu-west-1.compute.amazonaws.com:5432/d3puofc2shonpo',
+  ssl: process.env.DATABASE_URL ? true : false,
+  ssl: {
+      rejectUnauthorized: false,
+  }
 });
 
-export default async function query(text, params) {
-    return pool.query(text, params);
-}
+export default pool;
