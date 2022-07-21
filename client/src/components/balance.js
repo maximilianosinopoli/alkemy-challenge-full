@@ -2,9 +2,9 @@ import React from 'react'
 import Transaction from './transaction'
 import { useEffect, useState } from 'react'
 
-function Balance() {
+const Balance = () => {
 
-let balance = 0
+// Fetch data
 
   useEffect(() => {
     async function fetchData() {
@@ -15,13 +15,22 @@ let balance = 0
     fetchData()
   }, []);
 
+// Const's
+
+  let balance = 0
   let [data, setData] = useState([]);
+
+// Balance
 
 data.map((item) => {
    return balance = balance + item.amount
 })
 
+// Assign styles
+
 let balanceStyle = (balance > 0 ? 'green' : 'red')
+
+// Function add & remove
 
 function deleteTransaction(item) {
     console.log('Delete transaction:', item.id)
@@ -31,15 +40,12 @@ function editTransaction(item) {
     console.log('Edit transaction:', item.id)
 }
 
+// Component
+
     return (
         <div className='content'>
-            <h1><span className={balanceStyle}>	
-                &#128176; 	
-                &#128176; 	 
-                &nbsp;
-                BALANCE: £{balance} &nbsp;
-                &#128176; 	
-                &#128176;</span>
+            <h1 className={balanceStyle}>	
+                BALANCE: £{balance}
             </h1>
            
             <table className='table'>
