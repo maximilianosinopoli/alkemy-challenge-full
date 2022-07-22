@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react'
 
 const Balance = () => {
 
+// Const's
+
+let balance = 0
+let [data, setData] = useState([]);
+let [test, setTest] = useState(1);
+
 // Fetch data
 
   useEffect(() => {
@@ -13,12 +19,7 @@ const Balance = () => {
         setData(resJson.payload)
     }
     fetchData()
-  }, []);
-
-// Const's
-
-  let balance = 0
-  let [data, setData] = useState([]);
+  }, [test]);
 
 // Balance
 
@@ -34,6 +35,7 @@ let balanceStyle = (balance > 0 ? 'green' : 'red')
 
 function deleteTransaction(item) {
     console.log('Delete transaction:', item.id)
+    fetch(`http://localhost:3000/transactions/${item.id}`, { method: 'DELETE' })
 }
 
 function editTransaction(item) {
