@@ -1,9 +1,9 @@
-- Form to create new transaction
+- Edit Transactions
+- Remove Transactions
 - Pop-up for edit
 - Pop-up for delete
 - Responsive view
-- Set up API
-- Set up Database
 - Documentation
 - Axios library
 - Ajax petition
+- Login

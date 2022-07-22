@@ -8,18 +8,18 @@ const Balance = () => {
 
 let balance = 0
 let [data, setData] = useState([]);
-let [test, setTest] = useState(1);
 
 // Fetch data
 
-  useEffect(() => {
-    async function fetchData() {
-        const response = await fetch('http://localhost:3000/transactions')
-        const resJson = await response.json()
-        setData(resJson.payload)
-    }
+useEffect(() => {
     fetchData()
-  }, [test]);
+  }, []);
+
+async function fetchData() {
+    const response = await fetch('http://localhost:3000/transactions')
+    const resJson = await response.json()
+    setData(resJson.payload)
+}
 
 // Balance
 
@@ -33,12 +33,13 @@ let balanceStyle = (balance > 0 ? 'green' : 'red')
 
 // Function add & remove
 
-function deleteTransaction(item) {
+async function deleteTransaction(item) {
     console.log('Delete transaction:', item.id)
-    fetch(`http://localhost:3000/transactions/${item.id}`, { method: 'DELETE' })
+    await fetch(`http://localhost:3000/transactions/${item.id}`, { method: 'DELETE' })
+    fetchData()
 }
 
-function editTransaction(item) {
+async function editTransaction(item) {
     console.log('Edit transaction:', item.id)
 }
 
@@ -49,9 +50,7 @@ function editTransaction(item) {
             <h1 className={balanceStyle}>	
                 BALANCE: £{balance}
             </h1>
-           
-            <table className='table'>
-                 
+            <table className='table'>      
                 <tbody>
                 <tr className='titles'>
                     <th>Concept</th>
@@ -61,7 +60,7 @@ function editTransaction(item) {
                     <th>Category</th>
                     <th>Action</th>
                 </tr>
-                    {data.map((item, index) => {
+                    {data.map((item) => {
                         return <Transaction 
                             deleteTransaction={() => deleteTransaction(item)} 
                             editTransaction={() => editTransaction(item)} 
@@ -69,7 +68,7 @@ function editTransaction(item) {
                             price={item.amount} 
                             type={item.type} 
                             date={item.date} 
-                            category={item.category} 
+                            category={item.category}
                             key={item.id} 
                             style={(item.type === 'Income' ? 'income' : 'expenses')}
                         />

@@ -13,7 +13,6 @@ function Transaction({item, price, category, type, date, style, deleteTransactio
                         <button type="" onClick={deleteTransaction} className='button'>X</button>
                         <button type="" onClick={editTransaction} className='button'>Edit</button>
                     </td>
-
                 </tr> 
     )
 }
