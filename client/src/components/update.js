@@ -40,7 +40,7 @@ function Update() {
     return (
         <div className='form-container'>
             <form className='form'>
-            <h1 className='form-heading'>UPDATE TRANSACTION:</h1>
+            <h1 className='form-heading'>EDIT TRANSACTION:</h1>
                 <label >Concept</label><br></br>
                 <input type="text" name="" value={conceptValue} onChange={updateConcept}></input><br></br>
                 <label >Amount</label><br></br>
@@ -55,7 +55,7 @@ function Update() {
                     <option value="Salary">Salary</option>
                     <option value="Other">Other</option>
                 </select><br></br>
-                <Link onClick={updateValue} className="button-transaction" to="/">Update</Link>
+                <Link onClick={updateValue} className="button-transaction" to="/">Edit</Link>
             </form>
         </div>
     )

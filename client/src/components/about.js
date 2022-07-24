@@ -2,16 +2,9 @@ import React from 'react'
 
 function About() {
 
-
-console.log(document.location.href)
-
     return (
         <div className='about'>
            <div className='about-header'>
-               <div className='title-container'>
-                <h1 className='about-title'>I'm Max,</h1>
-                <h1 className='about-title'>a Software Engineer</h1>
-               </div>
                <img src="./about.png" alt="" className='about-img'></img>
            </div>
            <div className='about-description'>

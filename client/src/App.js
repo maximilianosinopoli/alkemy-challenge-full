@@ -8,7 +8,6 @@ import About from './components/about';
 import Footer from './components/footer';
 import Update from './components/update';
 
-
 function App() {
    
   return (

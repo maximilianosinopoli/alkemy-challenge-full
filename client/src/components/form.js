@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import PopUp from './popUp';
 
 function Form() {
 
@@ -36,10 +37,25 @@ function Form() {
         })
         .then(function(res){ console.log(res) })
         .catch(function(res){ console.log(res) })
+
+        setConceptValue('')
+        setAmountValue('')
+        setTypeValue('Income')
+        setCategoryValue("Food")
+
+        const popUp = document.querySelector("#pop-up");
+        popUp.classList.remove('pop-up')
+        popUp.classList.add('pop-up-show')
+        setTimeout(function() { 
+            popUp.classList.add('pop-up')
+            popUp.classList.remove('pop-up-show')
+         }, 1600);
     }
 
+    //Animation
+
     return <div className='form-container'>
-       
+       <PopUp text='Transaction added!'/>
        <form action="" className='form'>
        <h1 className='form-heading'>ADD NEW TRANSACTION:</h1>
            <label >Transaction:</label>
