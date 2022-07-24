@@ -6,6 +6,6 @@
 
 <h3>How run the project</h3>
 
-<p>Install dependencies with running `nmp i`</p>
+<p>Install dependencies running `npm i`</p>
 <p>For the Frontend, CD client folder and run `npm start`</p>
 <p>For the API, CD server folder and run `npm run dev`</p>
