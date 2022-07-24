@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Transaction({item, price, category, type, date, style, deleteTransaction, editTransaction}) {
 
@@ -7,14 +8,14 @@ function Transaction({item, price, category, type, date, style, deleteTransactio
                     <td>{item}</td>
                     <td>{price}</td>
                     <td>{type}</td>
-                    <td>{date}</td>
+                    <td className='action'>{date}</td>
                     <td>{category}</td>
-                    <td>
-                        <button type="" onClick={deleteTransaction} className='button'>X</button>
-                        <button type="" onClick={editTransaction} className='button'>Edit</button>
+                    <td className='action'>
+                        <button type="" onClick={deleteTransaction} className='button-transaction'>X</button>
+                        <Link onClick={editTransaction} className="button-transaction" to="/update">Edit</Link>  
                     </td>
                 </tr> 
     )
-}
+}       
 
 export default Transaction

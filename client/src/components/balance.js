@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react'
 
 const Balance = () => {
 
-// Const's
+// Date state
 
-let balance = 0
 let [data, setData] = useState([]);
 
 // Fetch data
@@ -23,32 +22,33 @@ async function fetchData() {
 
 // Balance
 
+let balance = 0
 data.map((item) => {
-   return balance = balance + item.amount
+    return item.type === "Income" ? balance = balance + item.amount : balance = balance - item.amount
 })
 
 // Assign styles
 
-let balanceStyle = (balance > 0 ? 'green' : 'red')
+let balanceStyle = (balance >= 0 ? 'green' : 'red')
 
-// Function add & remove
+// Delete and Session for Update
 
 async function deleteTransaction(item) {
-    console.log('Delete transaction:', item.id)
     await fetch(`http://localhost:3000/transactions/${item.id}`, { method: 'DELETE' })
     fetchData()
 }
 
 async function editTransaction(item) {
-    console.log('Edit transaction:', item.id)
+    sessionStorage.setItem('transactions', JSON.stringify(item));
 }
+
 
 // Component
 
     return (
         <div className='content'>
             <h1 className={balanceStyle}>	
-                BALANCE: £{balance}
+                BALANCE: ${balance}
             </h1>
             <table className='table'>      
                 <tbody>
@@ -60,21 +60,21 @@ async function editTransaction(item) {
                     <th>Category</th>
                     <th>Action</th>
                 </tr>
-                    {data.map((item) => {
+                    {data.slice(0, 10).map((item) => {
                         return <Transaction 
                             deleteTransaction={() => deleteTransaction(item)} 
                             editTransaction={() => editTransaction(item)} 
                             item={item.concept} 
                             price={item.amount} 
                             type={item.type} 
-                            date={item.date} 
+                            date={item.date.split('T')[0]} 
                             category={item.category}
                             key={item.id} 
                             style={(item.type === 'Income' ? 'income' : 'expenses')}
                         />
                     })}
                 </tbody>
-            </table>
+            </table>    
         </div>
     )
 }

@@ -5,8 +5,8 @@ import Header from './components/header';
 import Balance from './components/balance';
 import Form from './components/form';
 import About from './components/about';
-import Search from './components/search';
 import Footer from './components/footer';
+import Update from './components/update';
 
 
 function App() {
@@ -15,16 +15,12 @@ function App() {
     <Router>
       <div className='container'>
           <Header />
-
           <Routes>
-
             <Route path="/" element={<Balance/>}></Route>
             <Route path="/add" element={<Form/>}></Route>
             <Route path="/about" element={<About/>}></Route>
-            <Route path="/search" element={<Search/>}></Route>
-
+            <Route exact path="/update" element={<Update/>}></Route>
           </Routes>
-  
           <Footer />
         </div>
     </Router>

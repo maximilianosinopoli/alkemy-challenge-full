@@ -1,9 +1,7 @@
-- Edit Transactions
-- Remove Transactions
+- Edit date
+- Clean inputs after submit
 - Pop-up for edit
 - Pop-up for delete
 - Responsive view
 - Documentation
-- Axios library
-- Ajax petition
 - Login

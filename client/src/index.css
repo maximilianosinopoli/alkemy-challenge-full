@@ -6,21 +6,22 @@ body {
 }
 
 .container {
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.content {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 87vh;
-  width: 90%;
-}
+  .content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 87vh;
+    width: 90%;
+  }
 
 .header {
   background-color: rgb(204, 204, 204);
@@ -62,6 +63,17 @@ a {
   background-color: #3ddc97;
 }
 
+.button-transaction {
+  text-decoration: none;
+  font-size: large;
+  color: inherit;
+  border: 1px solid black;
+  border-radius: 12%;
+  padding: 6px;
+  background-color: #3ddc97;
+  margin: 3px;
+}
+
 .nav-link:hover {
   font-weight: bold;
   transform: scale(1.1);
@@ -93,10 +105,12 @@ a {
 
 .expenses {
   background-color: #ffbbc1;
+  height: 55px;
 }
 
 .income {
   background-color: rgb(167, 255, 167);
+  height: 55px;
 }
 
 .developer {
@@ -130,14 +144,14 @@ tr {
 
 .green {
   padding: 12px 20px 12px 20px;
-  border-radius: 30px;
-  background-color: rgb(167, 255, 167);
+  border-radius: 10px;
+  background-color: #3ddc97;
 }
 
 .red {
   padding: 12px 20px 12px 20px;
-  border-radius: 30px;
-  background-color: #ffbbc1;
+  border-radius: 10px;
+  background-color: #ff495c;
 }
 
 .form {
@@ -190,6 +204,10 @@ label {
   color: red;
   margin-bottom: 45px;
   text-decoration: underline;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 select {
@@ -200,3 +218,116 @@ select {
 .about {
   margin-top: 100px;
 }
+
+.action {
+  width: 25%
+}
+
+input {
+  width: 70%
+}
+
+.select {
+  width: 70%
+}
+
+.form-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.about-img {
+  height: 400px;
+  border-radius: 100%;
+}
+
+.about-title {
+  font-size: 50px;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 50px
+}
+
+.alkemy {
+  font-size: 35px;
+  color: blue;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1100px) {
+  .titles {
+    font-size: 14px;
+  }
+
+  tr {
+    font-size: 14px;
+  }
+
+  .content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 87vh;
+    width: 100%;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+  }
+  
+  table {
+    width: 97%;
+    margin-top: 12px;
+  }
+
+  .action {
+    width: 23%;
+  }
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

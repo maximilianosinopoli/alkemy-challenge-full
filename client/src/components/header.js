@@ -10,7 +10,6 @@ function Header() {
             <div className='header-container'>
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/add">Add New +</Link>
-                <Link className="nav-link" to="/search">Search</Link>
                 <Link className="nav-link" to="/about">About</Link>       
             </div>
         </div>

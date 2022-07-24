@@ -43,18 +43,18 @@ function Form() {
        <form action="" className='form'>
        <h1 className='form-heading'>ADD NEW TRANSACTION:</h1>
            <label >Transaction:</label>
-           <input type="text" onChange={updateConcept} value={conceptValue} required/> <br></br>
+           <input type="text" onChange={updateConcept} value={conceptValue} placeholder="Cinema, Supermarket, Course.."/> <br></br>
            <label >Amount:</label>
-           <input type="text" onChange={updateAmount} value={amountValue} required/> <br></br>
+           <input type="text" onChange={updateAmount} value={amountValue}/> <br></br>
            <label >Type:</label>
-           <select name="" id="" className='select' onChange={updateType} value={typeValue} required>
+           <select name="" id="" className='select' onChange={updateType} value={typeValue}>
              <option value="Income">Income</option>
              <option value="Expenses">Expenses</option>
             </select>
            <label >Date:</label>
-           <input type="date" onChange={updateDate} value={dateValue} required/> <br></br>
+           <input type="date" onChange={updateDate} value={dateValue}/> <br></br>
            <label >Category:</label>
-           <select name="" id="" className='select' onChange={updateCategory} value={categoryValue} required>
+           <select name="" id="" className='select' onChange={updateCategory} value={categoryValue}>
                 <option value="Food">Food</option>
                 <option value="Leisure">Leisure</option>
                 <option value="Bills">Bills</option>
